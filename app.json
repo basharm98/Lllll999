@@ -1,0 +1,109 @@
+{
+    "name": "Dragon Music",
+    "description": "Telegram Group Calls streaming bot with some useful features, written in Python with Pyrogram and Py-Tgcalls. Supporting platforms like Youtube, Spotify, Resso, AppleMusic, Soundcloud and M3u8 Links.",
+    "logo": "https://telegra.ph/file/1c167f98ec87794b4af2c.jpg",
+    "keywords": [
+    "python3",
+    "telegram",
+    "bot",
+    "Yukki",
+    "YukkiMusicBot",
+    "telegram-bot",
+    "pyrogram"
+    ],
+    "stack": "container",
+    "env": {
+      "API_ID": {
+        "description": "آيبي ايدي",
+        "value": "",
+        "required": true
+      },
+      "API_HASH": {
+        "description": "ايبي هاش",
+        "value": "",
+        "required": true
+      },
+      "AUTO_LEAVING_ASSISTANT": {
+        "description": "لا تغير شيء",
+        "value": "True",
+        "required": false
+      },
+      "BOT_TOKEN": {
+        "description": "توكن بوتك",
+        "value": "",
+        "required": true
+      },
+      "GITHUB_REPO": {
+        "description": "رابط حسابك",
+        "value": "",
+        "required": false
+      },
+      "SUPPORT_GROUP": {
+        "description": "رابط كروبك",
+        "value": "",
+        "required": false
+      },
+      "SUPPORT_CHANNEL": {
+        "description": "رابط قناتك",
+        "value": "",
+        "required": false
+      },
+      "START_IMG_URL": {
+        "description": "رابط صورة التسارت @tlgraphmeda5bot",
+        "value": "",
+        "required": false
+      },
+      "MONGO_DB_URI": {
+        "description": "قاعدة البيانات",
+        "value": "",
+        "required": true
+      },
+      "MUSIC_BOT_NAME": {
+        "description": "اسم بوتك ، لا تخلي مزخرف",
+        "value": "",
+        "required": true
+      },
+      "OWNER_ID": {
+        "description": "آيدي المطور",
+        "value": "",
+        "required": true
+      },
+      "STRING_SESSION": {
+        "description": "كود بايروجرام @drag46bot",
+        "value": "",
+        "required": true
+      },
+      "LOG_GROUP_ID": {
+        "description": "آيدي كروب التجربة",
+        "value": "",
+        "required": true
+      },
+      "UPSTREAM_REPO": {
+        "description": "رابط الريبو اذا ماعرفت عيفو",
+        "value": "https://github.com/QaAhmed/v1",
+        "required": true
+      },
+      "UPSTREAM_BRANCH": {
+        "description": "لا تغير شيء",
+        "value": "master",
+        "required": true
+      }
+    },
+    "buildpacks": [
+          {
+              "url": "heroku/python"
+          },
+          {
+              "url": "heroku/nodejs"
+          },
+          {
+              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+          }
+      ],
+      "formation": {
+          "worker": {
+              "quantity": 1,
+              "size": "free"
+          }
+      }
+  }
